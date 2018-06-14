@@ -1,5 +1,5 @@
 (async function() {
-	const API_URL = 'http://worldcup.sfg.io/teams/results';
+	const API_URL = 'https://worldcup.sfg.io/teams/results';
 
 	const response = await fetch(API_URL);
 	const results = await response.json();
