@@ -1,7 +1,8 @@
 (async function() {
-	const API_URL = 'https://worldcup.sfg.io/teams/results';
+	const protocol = window.location.protocol === 'https' ? 'https' : 'http';
+	const API_URL = '//worldcup.sfg.io/teams/results';
 
-	const response = await fetch(API_URL);
+	const response = await fetch(`${protocol}:${API_URL}`);
 	const results = await response.json();
 
 	console.log(results);
@@ -22,11 +23,13 @@
 		let total = 0;
 		const totalCell = totalCells[i];
 
-		const colCells = document.querySelectorAll(`tbody tr td:nth-child(${i})`);
+		const colCells = document.querySelectorAll(`tbody tr td:nth-child(${i + 2})`);
 
 		for (var j = 0; j < colCells.length; j++) {
-			if (parseInt(colCells.innerHTML, 10) > 0) {
-				total += parseInt(colCells.innerHTML, 10);
+			const cell = colCells[j];
+
+			if (cell.classList.contains('table-success') && parseInt(cell.innerHTML, 10) > 0) {
+				total += parseInt(cell.innerHTML, 10);
 			}
 		}
 
