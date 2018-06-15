@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,105 +10,127 @@
 
 	<style>
 		body {
-			padding: 2rem;
-		}
+					padding: 2rem;
+				}
 
-		h1 {
-			margin-bottom: 2rem;
-		}
+				h1 {
+					margin-bottom: 2rem;
+				}
 
-		.country-fixed {
-			position: absolute;
-			top: 190px;
-		}
+				.country-fixed {
+					position: absolute;
+					top: 112px;
+				}
 
-		.country-fixed__cell {
-			background-color: #fff;
-			border-top: 1px solid #dee2e6;
-			height: 35px;
-			line-height: 24px;
-			padding: .3rem;
-		}
+				.country-fixed__th {
+					/* background-color: #e9ecef; */
+					background-image: linear-gradient(to right, #e9ecef 90%, rgba(0, 0, 0, 0) 100%);
+					border-bottom: 1px solid #dee2e6;
+					border-color: #dee2e6;
+					border-top: 1px solid #dee2e6;
+					color: #495057;
+					font-weight: bold;
+					height: 36px;
+					line-height: 18px;
+					padding: .3rem;
+					padding-bottom: .5rem ! important;
+					padding-top: .5rem ! important;
+				}
 
-		table {
-			table-layout: fixed;
-		}
+				.country-fixed__td {
+					background-color: #fff;
+					/* background-image: linear-gradient(to right, #fff 90%, rgba(0, 0, 0, 0) 100%); */
+					border-top: 1px solid #dee2e6;
+					height: 35px;
+					line-height: 24px;
+					padding: .3rem;
+				}
 
-		th {
-			white-space: nowrap;
-		}
+				table {
+					table-layout: fixed;
+				}
 
-		thead th {
-			display: table-cell;
-			padding-bottom: .5rem ! important;
-			padding-top: .5rem ! important;
-			width: 10rem;
-			text-align: center;
-		}
+				th {
+					white-space: nowrap;
+				}
 
-		thead th span {
-			display: inline-block;
-			width: 6rem;
-		}
+				thead th {
+					display: table-cell;
+					padding-bottom: .5rem ! important;
+					padding-top: .5rem ! important;
+					width: 10rem;
+					text-align: center;
+				}
 
-		thead th:first-child {
-			text-align: left;
-		}
+				thead th span {
+					display: inline-block;
+					width: 6rem;
+				}
 
-		td {
-			color: #aaa;
-			line-height: 1.5rem;
-			text-align: center;
-			vertical-align: middle;
-		}
+				thead th:first-child {
+					text-align: left;
+				}
 
-		.table-success {
-			color: #000;
-		}
+				td {
+					color: #aaa;
+					line-height: 1.5rem;
+					text-align: center;
+					vertical-align: middle;
+				}
+
+				.table-success {
+					color: #000;
+				}
 	</style>
 </head>
+
 <body>
 	<h1>World Cup 2018 Pool</h1>
 
 	<div class="country-fixed">
-		<div class="country-fixed__cell">🇦🇷 Argentina</div>
-		<div class="country-fixed__cell">🇦🇺 Australia</div>
-		<div class="country-fixed__cell">🇧🇪 Belgium</div>
-		<div class="country-fixed__cell">🇧🇷 Brazil</div>
-		<div class="country-fixed__cell">🇨🇴 Colombia</div>
-		<div class="country-fixed__cell">🇨🇷 Costa Rica</div>
-		<div class="country-fixed__cell">🇭🇷 Croatia</div>
-		<div class="country-fixed__cell">🇩🇰 Denmark</div>
-		<div class="country-fixed__cell">🇪🇬 Egypt</div>
-		<div class="country-fixed__cell">🏴󠁧󠁢󠁥󠁮󠁧󠁿󠁧󠁢󠁥󠁮󠁧󠁿 England</div>
-		<div class="country-fixed__cell">🇫🇷France</div>
-		<div class="country-fixed__cell">🇩🇪 Germany</div>
-		<div class="country-fixed__cell">🇮🇸 Iceland</div>
-		<div class="country-fixed__cell">🇮🇷 Iran</div>
-		<div class="country-fixed__cell">🇯🇵 Japan</div>
-		<div class="country-fixed__cell">🇲🇽 Mexico</div>
-		<div class="country-fixed__cell">🇲🇦 Morocco</div>
-		<div class="country-fixed__cell">🇳🇬 Nigeria</div>
-		<div class="country-fixed__cell">🇵🇦 Panama</div>
-		<div class="country-fixed__cell">🇵🇪 Peru</div>
-		<div class="country-fixed__cell">🇵🇱 Poland</div>
-		<div class="country-fixed__cell">🇵🇹 Portugal</div>
-		<div class="country-fixed__cell">🇷🇺 Russia</div>
-		<div class="country-fixed__cell">🇸🇦 Saudi Arabia</div>
-		<div class="country-fixed__cell">🇸🇳 Senegal</div>
-		<div class="country-fixed__cell">🇷🇸 Serbia</div>
-		<div class="country-fixed__cell">🇰🇷 South Korea</div>
-		<div class="country-fixed__cell">🇪🇸 Spain</div>
-		<div class="country-fixed__cell">🇸🇪 Sweden</div>
-		<div class="country-fixed__cell">🇨🇭 Switzerland</div>
-		<div class="country-fixed__cell">🇹🇳 Tunisia</div>
-		<div class="country-fixed__cell">🇺🇾 Uruguay</div>
+		<div class="country-fixed__th">Team</div>
+		<div class="country-fixed__th">Total</div>
+		<div class="country-fixed__td">🇦🇷 Argentina</div>
+		<div class="country-fixed__td">🇦🇺 Australia</div>
+		<div class="country-fixed__td">🇧🇪 Belgium</div>
+		<div class="country-fixed__td">🇧🇷 Brazil</div>
+		<div class="country-fixed__td">🇨🇴 Colombia</div>
+		<div class="country-fixed__td">🇨🇷 Costa Rica</div>
+		<div class="country-fixed__td">🇭🇷 Croatia</div>
+		<div class="country-fixed__td">🇩🇰 Denmark</div>
+		<div class="country-fixed__td">🇪🇬 Egypt</div>
+		<div class="country-fixed__td">🏴󠁧󠁢󠁥󠁮󠁧󠁿󠁧󠁢󠁥󠁮󠁧󠁿 England</div>
+		<div class="country-fixed__td">🇫🇷France</div>
+		<div class="country-fixed__td">🇩🇪 Germany</div>
+		<div class="country-fixed__td">🇮🇸 Iceland</div>
+		<div class="country-fixed__td">🇮🇷 Iran</div>
+		<div class="country-fixed__td">🇯🇵 Japan</div>
+		<div class="country-fixed__td">🇲🇽 Mexico</div>
+		<div class="country-fixed__td">🇲🇦 Morocco</div>
+		<div class="country-fixed__td">🇳🇬 Nigeria</div>
+		<div class="country-fixed__td">🇵🇦 Panama</div>
+		<div class="country-fixed__td">🇵🇪 Peru</div>
+		<div class="country-fixed__td">🇵🇱 Poland</div>
+		<div class="country-fixed__td">🇵🇹 Portugal</div>
+		<div class="country-fixed__td">🇷🇺 Russia</div>
+		<div class="country-fixed__td">🇸🇦 Saudi Arabia</div>
+		<div class="country-fixed__td">🇸🇳 Senegal</div>
+		<div class="country-fixed__td">🇷🇸 Serbia</div>
+		<div class="country-fixed__td">🇰🇷 South Korea</div>
+		<div class="country-fixed__td">🇪🇸 Spain</div>
+		<div class="country-fixed__td">🇸🇪 Sweden</div>
+		<div class="country-fixed__td">🇨🇭 Switzerland</div>
+		<div class="country-fixed__td">🇹🇳 Tunisia</div>
+		<div class="country-fixed__td">🇺🇾 Uruguay</div>
 	</div>
 
-	<table class="table table-hover table-responsive table-sm">
+	<table class="table table-responsive table-sm">
 		<thead class="thead-light">
 			<tr>
 				<th scope="col">Team</th>
+				<th scope="col"><span>Chris P.</span></th>
+				<th scope="col"><span>Ruben C.</span></th>
+				<th scope="col"><span>Ashleigh S.</span></th>
 				<th scope="col"><span>Lars A.</span></th>
 				<th scope="col"><span>Heather D.</span></th>
 				<th scope="col"><span>Stephanie L.</span></th>
@@ -115,12 +138,10 @@
 				<th scope="col"><span>Mike W.</span></th>
 				<th scope="col"><span>Simon B.</span></th>
 				<th scope="col"><span>Catherine W.</span></th>
-				<th scope="col"><span>Ruben C.</span></th>
 				<th scope="col"><span>Day K.</span></th>
 				<th scope="col"><span>Mark B.</span></th>
 				<th scope="col"><span>Charlotte B.</span></th>
 				<th scope="col"><span>Tiffanie C.</span></th>
-				<th scope="col"><span>Ashleigh S.</span></th>
 				<th scope="col"><span>Pablo R.</span></th>
 				<th scope="col"><span>Jan G. 1</span></th>
 				<th scope="col"><span>Jan G. 2</span></th>
@@ -129,7 +150,6 @@
 				<th scope="col"><span>Aaron L.</span></th>
 				<th scope="col"><span>Vaidas M.</span></th>
 				<th scope="col"><span>Steen R.</span></th>
-				<th scope="col"><span>Chris P.</span></th>
 				<th scope="col"><span>Chris A.</span></th>
 				<th scope="col"><span>Caterina S.</span></th>
 				<th scope="col"><span>Scott B.</span></th>
@@ -176,41 +196,1098 @@
 			</tr>
 		</thead>
 		<tbody>
-				<tr data-country="Argentina"><th scope="row">🇦🇷 Argentina</th><td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td></tr>
-				<tr data-country="Australia"><th scope="row">🇦🇺 Australia</th><td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Belgium"><th scope="row">🇧🇪 Belgium</th><td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Brazil"><th scope="row">🇧🇷 Brazil</th><td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td></tr>
-				<tr data-country="Colombia"><th scope="row">🇨🇴 Colombia</th><td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Costa Rica"><th scope="row">🇨🇷 Costa Rica</th><td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td></tr>
-				<tr data-country="Croatia"><th scope="row">🇭🇷 Croatia</th><td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Denmark"><th scope="row">🇩🇰 Denmark</th><td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-				<tr data-country="Egypt"><th scope="row">🇪🇬 Egypt</th><td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="England"><th scope="row">🏴󠁧󠁢󠁥󠁮󠁧󠁿󠁧󠁢󠁥󠁮󠁧󠁿 England</th><td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-				<tr data-country="France"><th scope="row">🇫🇷France</th><td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Germany"><th scope="row">🇩🇪 Germany</th><td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Iceland"><th scope="row">🇮🇸 Iceland</th><td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Iran"><th scope="row">🇮🇷 Iran</th><td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Japan"><th scope="row">🇯🇵 Japan</th><td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td></tr>
-				<tr data-country="Mexico"><th scope="row">🇲🇽 Mexico</th><td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Morocco"><th scope="row">🇲🇦 Morocco</th><td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Nigeria"><th scope="row">🇳🇬 Nigeria</th><td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-				<tr data-country="Panama"><th scope="row">🇵🇦 Panama</th><td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td></tr>
-				<tr data-country="Peru"><th scope="row">🇵🇪 Peru</th><td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Poland"><th scope="row">🇵🇱 Poland</th><td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Portugal"><th scope="row">🇵🇹 Portugal</th><td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Russia"><th scope="row">🇷🇺 Russia</th><td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Saudi Arabia"><th scope="row">🇸🇦 Saudi Arabia</th><td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-				<tr data-country="Senegal"><th scope="row">🇸🇳 Senegal</th><td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Serbia"><th scope="row">🇷🇸 Serbia</th><td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Korea Republic"><th scope="row">🇰🇷 South Korea</th><td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Spain"><th scope="row">🇪🇸 Spain</th><td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td></tr>
-				<tr data-country="Sweden"><th scope="row">🇸🇪 Sweden</th><td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-				<tr data-country="Switzerland"><th scope="row">🇨🇭 Switzerland</th><td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td></tr>
-				<tr data-country="Tunisia"><th scope="row">🇹🇳 Tunisia</th><td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td></tr>
-				<tr data-country="Uruguay"><th scope="row">🇺🇾 Uruguay</th><td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td class="table-success" data-pick></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td class="table-success" data-pick></td>	<td></td>	<td></td>	<td></td></tr>
+			<tr data-country="Argentina">
+				<th scope="row">🇦🇷 Argentina</th>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+			</tr>
+			<tr data-country="Australia">
+				<th scope="row">🇦🇺 Australia</th>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Belgium">
+				<th scope="row">🇧🇪 Belgium</th>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Brazil">
+				<th scope="row">🇧🇷 Brazil</th>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+			</tr>
+			<tr data-country="Colombia">
+				<th scope="row">🇨🇴 Colombia</th>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Costa Rica">
+				<th scope="row">🇨🇷 Costa Rica</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+			</tr>
+			<tr data-country="Croatia">
+				<th scope="row">🇭🇷 Croatia</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Denmark">
+				<th scope="row">🇩🇰 Denmark</th>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Egypt">
+				<th scope="row">🇪🇬 Egypt</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="England">
+				<th scope="row">🏴󠁧󠁢󠁥󠁮󠁧󠁿󠁧󠁢󠁥󠁮󠁧󠁿 England</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="France">
+				<th scope="row">🇫🇷France</th>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Germany">
+				<th scope="row">🇩🇪 Germany</th>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Iceland">
+				<th scope="row">🇮🇸 Iceland</th>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Iran">
+				<th scope="row">🇮🇷 Iran</th>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Japan">
+				<th scope="row">🇯🇵 Japan</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+			</tr>
+			<tr data-country="Mexico">
+				<th scope="row">🇲🇽 Mexico</th>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Morocco">
+				<th scope="row">🇲🇦 Morocco</th>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Nigeria">
+				<th scope="row">🇳🇬 Nigeria</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Panama">
+				<th scope="row">🇵🇦 Panama</th>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+			</tr>
+			<tr data-country="Peru">
+				<th scope="row">🇵🇪 Peru</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Poland">
+				<th scope="row">🇵🇱 Poland</th>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Portugal">
+				<th scope="row">🇵🇹 Portugal</th>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Russia">
+				<th scope="row">🇷🇺 Russia</th>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Saudi Arabia">
+				<th scope="row">🇸🇦 Saudi Arabia</th>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Senegal">
+				<th scope="row">🇸🇳 Senegal</th>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Serbia">
+				<th scope="row">🇷🇸 Serbia</th>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Korea Republic">
+				<th scope="row">🇰🇷 South Korea</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Spain">
+				<th scope="row">🇪🇸 Spain</th>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+			</tr>
+			<tr data-country="Sweden">
+				<th scope="row">🇸🇪 Sweden</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Switzerland">
+				<th scope="row">🇨🇭 Switzerland</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr data-country="Tunisia">
+				<th scope="row">🇹🇳 Tunisia</th>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+			</tr>
+			<tr data-country="Uruguay">
+				<th scope="row">🇺🇾 Uruguay</th>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-success" data-pick></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
 		</tbody>
 	</table>
 
 	<script src="script.js"></script>
 </body>
+
 </html>
