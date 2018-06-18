@@ -69,15 +69,13 @@
 		]
 	};
 
-	const protocol = window.location.protocol === 'https' ? 'https' : 'http';
-	const API_URL = '//worldcup.sfg.io/teams/results';
-
+	const API_URL = 'https://world-cup-json.herokuapp.com/teams/results';
 
 	function getPoints(team) {
 		return team.wins * 5 + team.draws * 2;
 	}
 
-	const response = await fetch(`${protocol}:${API_URL}`);
+	const response = await fetch(API_URL);
 	let teams = await response.json();
 
 	teams = teams.sort((a, b) => {
