@@ -21,7 +21,7 @@
 		}
 
 		table {
-			table-layout: fixed;
+			table-layout: inherit;
 		}
 
 		th {
@@ -40,7 +40,7 @@
 		thead th span {
 			display: inline-block;
 			line-height: 18px;
-			width: 6rem;
+			min-width: 5rem;
 		}
 
 		thead th:first-child {
@@ -61,25 +61,54 @@
 		.table-null {
 			color: #fff;
 		}
+    
+        .scrolling {
+            position: relative;
+        }
+
+        .scrolling tbody td,
+        .scrolling tbody th {
+            vertical-align: middle;
+            padding: 10px;
+            min-width: 120px;
+        }
+
+        .scrolling thead th:first-child,
+        .scrolling tbody th {
+            position: absolute;
+            left: 0;
+            width: 160px;
+        }
+    
+        .scrolling-inner {
+            overflow-x: auto;
+            overflow-y: visible;
+            margin-left: 160px;
+            z-index: 0;
+        }
 	</style>
 </head>
 
 <body>
 	<h1>World Cup 2018 Pool</h1>
 
-	<table class="table table-responsive table-hover table-sm">
-		<thead class="thead-light">
-			<tr data-player-row>
-				<th scope="col"><span>Team</span></th>
-			</tr>
-			<tr data-total-row>
-				<th scope="col"><span>Total</span></th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
-
+    <div class="scrolling">
+        <div class="scrolling-inner">
+            <table class="table table-hover table-sm">
+                <thead class="thead-light">
+                    <tr data-player-row>
+                        <th scope="col"><span>Team</span></th>
+                    </tr>
+                    <tr data-total-row>
+                        <th scope="col"><span>Total</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
 	<script src="script.js"></script>
 </body>
 
