@@ -10,7 +10,7 @@
 			"Croatia": "🇭🇷 Croatia",
 			"Denmark": "🇩🇰 Denmark",
 			"Egypt": "🇪🇬 Egypt",
-			"England": "󠁧󠁢󠁥󠁮󠁧󠁿󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁥󠁮󠁧󠁿 England",
+			"England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England",
 			"France": "🇫🇷 France",
 			"Germany": "🇩🇪 Germany",
 			"Iceland": "🇮🇸 Iceland",
@@ -32,7 +32,7 @@
 			"Sweden": "🇸🇪 Sweden",
 			"Switzerland": "🇨🇭 Switzerland",
 			"Tunisia": "🇹🇳 Tunisia",
-			"Uruguay": "🇺🇾 Uruguay"
+			"Uruguay": "🇺🇾 Uruguay"
 		},
 		"players": [
 			{ "name": "Chris P.", "teams": [ "Brazil", "Colombia", "Denmark", "France", "Iran", "Panama", "Poland", "Portugal", "Russia", "Saudi Arabia", "Spain", "Tunisia" ], "points": 0 },
@@ -66,7 +66,7 @@
 			{ "name": "Mark Bice", "teams": [ "Australia", "Belgium", "Colombia", "Germany", "Iceland", "Iran", "Mexico", "Peru", "Poland", "Portugal", "Russia", "Switzerland" ], "points": 0 },
 			{ "name": "Stefanie L.", "teams": [ "Argentina", "Brazil", "Colombia", "Costa Rica", "Egypt", "France", "Japan", "Mexico", "Morocco", "Panama", "Spain", "Tunisia" ], "points": 0 },
 			{ "name": "Tara C.", "teams": [ "Colombia", "Croatia", "Egypt", "France", "Iceland", "Mexico", "Morocco", "Portugal", "Senegal", "Serbia", "Korea Republic", "Spain" ], "points": 0 },
-			{ "name": "Avery D.", "teams": [ "Brazil", "France", "England", "Uruguay", "Croatia", "Colombia", "Mexico", "Serbia", "Iceland", "Korea Republic", "Iran", "Saudi Arabia" ] }
+			{ "name": "Avery D.", "teams": [ "Brazil", "France", "England", "Uruguay", "Croatia", "Colombia", "Mexico", "Serbia", "Iceland", "Korea Republic", "Iran", "Saudi Arabia" ], "points": 0 }
 		]
 	};
 
