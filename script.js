@@ -85,30 +85,48 @@
 
 	teams.forEach(team => {
 		data.players.forEach(player => {
+			if (!player.points) {
+				player.points = 0;
+			}
+
+			if (!player.gamesPlayed) {
+				player.gamesPlayed = 0;
+			}
+
 			if (player.teams.indexOf(team.country) > -1) {
 				player.points += team.wins * 5 + team.draws * 2;
+				player.gamesPlayed += team.wins + team.draws + team.losses;
 			}
 		});
 	});
 
+	// data.players = data.players.sort((a, b) => {
+	// 	return b.points - a.points;
+	// });
+
 	data.players = data.players.sort((a, b) => {
-		return b.points - a.points;
+		return (b.points / b.gamesPlayed) - (a.points / a.gamesPlayed);
 	});
 
 	const playerRow = document.querySelector('[data-player-row]');
-	const playerHTML = data.players.reduce((html, player) => {
+	playerRow.innerHTML = data.players.reduce((html, player) => {
 		return `${html}<th><span>${player.name}</span></th>`;
 	}, playerRow.innerHTML);
 
-	playerRow.innerHTML = playerHTML;
+	const gamesPlayedRow = document.querySelector('[data-games-played-row]');
+	gamesPlayedRow.innerHTML = data.players.reduce((html, player) => {
+		return `${html}<th><small>${player.gamesPlayed}</small></th>`;
+	}, gamesPlayedRow.innerHTML);
 
 	const totalRow = document.querySelector('[data-total-row]');
-	const totalHTML = data.players.reduce((html, player) => {
+	totalRow.innerHTML =data.players.reduce((html, player) => {
 		return `${html}<th><span>${player.points}</span></th>`;
 	}, totalRow.innerHTML);
 
-	totalRow.innerHTML = totalHTML;
-
+	const pointsPerGameRow = document.querySelector('[data-points-per-game-row]');
+	pointsPerGameRow.innerHTML = data.players.reduce((html, player) => {
+		return `${html}<th><small>${(player.points / player.gamesPlayed).toFixed(2)}</small></th>`;
+	}, pointsPerGameRow.innerHTML);
 
 	const body = document.querySelector('tbody');
 	const bodyHTML = teams.reduce((previousRow, team) => {
