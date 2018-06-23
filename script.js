@@ -3,7 +3,39 @@ const LOCAL_STORAGE_TEAMS_KEY = 'getTeamsJson';
 
 const data = {
 	"teams": {
-		"Argentina": "🇦🇷 Argentina", "Australia": "🇦🇺 Australia", "Belgium": "🇧🇪 Belgium", "Brazil": "🇧🇷 Brazil", "Colombia": "🇨🇴 Colombia", "Costa Rica": "🇨🇷 Costa Rica", "Croatia": "🇭🇷 Croatia", "Denmark": "🇩🇰 Denmark", "Egypt": "🇪🇬 Egypt", "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", "France": "🇫🇷 France", "Germany": "🇩🇪 Germany", "Iceland": "🇮🇸 Iceland", "Iran": "🇮🇷 Iran", "Japan": "🇯🇵 Japan", "Mexico": "🇲🇽 Mexico", "Morocco": "🇲🇦 Morocco", "Nigeria": "🇳🇬 Nigeria", "Panama": "🇵🇦 Panama", "Peru": "🇵🇪 Peru", "Poland": "🇵🇱 Poland", "Portugal": "🇵🇹 Portugal", "Russia": "🇷🇺 Russia", "Saudi Arabia": "🇸🇦 Saudi Arabia", "Senegal": "🇸🇳 Senegal", "Serbia": "🇷🇸 Serbia", "Korea Republic": "🇰🇷 South Korea", "Spain": "🇪🇸 Spain", "Sweden": "🇸🇪 Sweden", "Switzerland": "🇨🇭 Switzerland", "Tunisia": "🇹🇳 Tunisia", "Uruguay": "🇺🇾 Uruguay" 	},
+		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14" },
+		"Australia": { displayName: "🇦🇺 Australia", cost: "3" },
+		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14" },
+		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18" },
+		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8" },
+		"Costa Rica": { displayName: "🇨🇷 Costa Rica", cost: "3" },
+		"Croatia": { displayName: "🇭🇷 Croatia", cost: "9" },
+		"Denmark": { displayName: "🇩🇰 Denmark", cost: "8" },
+		"Egypt": { displayName: "🇪🇬 Egypt", cost: "7" },
+		"England": { displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13" },
+		"France": { displayName: "🇫🇷 France", cost: "16" },
+		"Germany": { displayName: "🇩🇪 Germany", cost: "18" },
+		"Iceland": { displayName: "🇮🇸 Iceland", cost: "5" },
+		"Iran": { displayName: "🇮🇷 Iran", cost: "2" },
+		"Japan": { displayName: "🇯🇵 Japan", cost: "4" },
+		"Mexico": { displayName: "🇲🇽 Mexico", cost: "8" },
+		"Morocco": { displayName: "🇲🇦 Morocco", cost: "3" },
+		"Nigeria": { displayName: "🇳🇬 Nigeria", cost: "5" },
+		"Panama": { displayName: "🇵🇦 Panama", cost: "1" },
+		"Peru": { displayName: "🇵🇪 Peru", cost: "6" },
+		"Poland": { displayName: "🇵🇱 Poland", cost: "8" },
+		"Portugal": { displayName: "🇵🇹 Portugal", cost: "12" },
+		"Russia": { displayName: "🇷🇺 Russia", cost: "8" },
+		"Saudi Arabia": { displayName: "🇸🇦 Saudi Arabia", cost: "1" },
+		"Senegal": { displayName: "🇸🇳 Senegal", cost: "6" },
+		"Serbia": { displayName: "🇷🇸 Serbia", cost: "7" },
+		"Korea Republic": { displayName: "🇰🇷 South Korea", cost: "3" },
+		"Spain": { displayName: "🇪🇸 Spain", cost: "16" },
+		"Sweden": { displayName: "🇸🇪 Sweden", cost: "7" },
+		"Switzerland": { displayName: "🇨🇭 Switzerland", cost: "8" },
+		"Tunisia": { displayName: "🇹🇳 Tunisia", cost: "2" },
+		"Uruguay": { displayName: "🇺🇾 Uruguay", cost: "10" }
+	},
 	"players": [
 		{ "name": "Chris P.", "teams": [ "Brazil", "Colombia", "Denmark", "France", "Iran", "Panama", "Poland", "Portugal", "Russia", "Saudi Arabia", "Spain", "Tunisia" ], "points": 0 },
 		{ "name": "Ruben C.", "teams": [ "Argentina", "Australia", "Brazil", "Colombia", "Mexico", "Panama", "Portugal", "Saudi Arabia", "Serbia", "Spain", "Tunisia", "Uruguay" ], "points": 0 },
@@ -80,12 +112,8 @@ async function getTeams() {
 	return responseJson;
 }
 
-function getPoints(team) {
-	return team.wins * 5 + team.draws * 2;
-}
-
 function sortTeams(a, b) {
-	return getPoints(b) - getPoints(a);
+	return b.points - a.points;
 }
 
 function sortPlayers(a, b) {
@@ -96,7 +124,94 @@ function sortPlayers(a, b) {
 	return (b.points / b.gamesPlayed) - (a.points / a.gamesPlayed);
 }
 
-function generatePoints(team) {
+function generateTeamPointsCost(team) {
+	team.points = team.wins * 5 + team.draws * 2;
+	team.cost = data.teams[team.country].cost;
+}
+
+
+function getBestTeam(teams) {
+	const solution = knapsack(teams, 100).subset;
+
+	return {
+		name: "Best team",
+		points: 0,
+		gamesPlayed: 0,
+		teams: solution.map(t => t.country)
+	}
+}
+
+function knapsack (items, capacity) {
+	// This implementation uses dynamic programming.
+	// Variable 'memo' is a grid(2-dimentional array) to store optimal solution for sub-problems,
+	// which will be later used as the code execution goes on.
+	// This is called memoization in programming.
+	// The cell will store best solution objects for different capacities and selectable items.
+	var memo = [];
+
+	// Filling the sub-problem solutions grid.
+	for (var i = 0; i < items.length; i++) {
+		// Variable 'cap' is the capacity for sub-problems. In this example, 'cap' ranges from 1 to 6.
+		var row = [];
+
+		for (var cap = 1; cap <= capacity; cap++) {
+			row.push(getSolution(i, cap));
+		}
+
+		memo.push(row);
+	}
+
+	// The right-bottom-corner cell of the grid contains the final solution for the whole problem.
+	return (getLast());
+
+	function getLast() {
+		var lastRow = memo[memo.length - 1];
+
+		return lastRow[lastRow.length - 1];
+	}
+
+	function getSolution(row, cap) {
+		const NO_SOLUTION = { maxValue: 0, subset:[] };
+
+		// the column number starts from zero.
+		var col = cap - 1;
+		var lastItem = items[row];
+
+		// The remaining capacity for the sub-problem to solve.
+		var remaining = cap - lastItem.cost;
+
+		// Refer to the last solution for this capacity,
+		// which is in the cell of the previous row with the same column
+		var lastSolution = row > 0 ? memo[row - 1][col] || NO_SOLUTION : NO_SOLUTION;
+		// Refer to the last solution for the remaining capacity,
+		// which is in the cell of the previous row with the corresponding column
+		var lastSubSolution = row > 0 ? memo[row - 1][remaining - 1] || NO_SOLUTION : NO_SOLUTION;
+
+		// If any one of the items weights greater than the 'cap', return the last solution
+		if (remaining < 0) {
+			return lastSolution;
+		}
+
+		// Compare the current best solution for the sub-problem with a specific capacity
+		// to a new solution trial with the lastItem(new item) added
+		var lastValue = lastSolution.maxValue;
+		var lastSubValue = lastSubSolution.maxValue;
+
+		var newValue = lastSubValue + lastItem.points;
+
+		if (newValue >= lastValue && lastSubSolution.subset.length < 12) {
+			// copy the subset of the last sub-problem solution
+			var _lastSubSet = lastSubSolution.subset.slice();
+			_lastSubSet.push(lastItem);
+
+			return { maxValue: newValue, subset:_lastSubSet };
+		} else {
+			return lastSolution;
+		}
+	}
+}
+
+function generatePlayerPoints(team) {
 	data.players.forEach(player => {
 		if (!player.points) {
 			player.points = 0;
@@ -107,14 +222,21 @@ function generatePoints(team) {
 		}
 
 		if (player.teams.indexOf(team.country) > -1) {
-			player.points += team.wins * 5 + team.draws * 2;
-			player.gamesPlayed += team.wins + team.draws + team.losses;
+			player.points += team.points;
+			player.gamesPlayed += team.games_played;
 		}
 	});
 }
 
 function generateHtml(teams, players) {
 	const thead = document.querySelector('thead');
+
+	const placeRow = document.createElement('tr');
+	placeRow.innerHTML = `<th scope="col"><span>Place</span></th>`;
+	placeRow.innerHTML = players.reduce((html, player) => {
+		return `${html}<th><span>${players.indexOf(player) > 0 ? players.indexOf(player) : ''}</span></th>`;
+	}, placeRow.innerHTML);
+	thead.appendChild(placeRow);
 
 	const playerRow = document.createElement('tr');
 	playerRow.innerHTML = `<th scope="col"><span>Team</span></th>`;
@@ -126,7 +248,7 @@ function generateHtml(teams, players) {
 	const totalRow = document.createElement('tr');
 	totalRow.innerHTML = `<th scope="col"><span>Total points</span></th>`;
 	totalRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><span>${player.points}</span></th>`;
+		return `${html}<th><small>${player.points}</small></th>`;
 	}, totalRow.innerHTML);
 	thead.appendChild(totalRow);
 
@@ -140,17 +262,17 @@ function generateHtml(teams, players) {
 	const pointsPerGameRow = document.createElement('tr');
 	pointsPerGameRow.innerHTML = `<th scope="col"><span>Points per game</span></th>`;
 	pointsPerGameRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><small>${(player.points / player.gamesPlayed).toFixed(2)}</small></th>`;
+		return `${html}<th><span>${(player.points / player.gamesPlayed).toFixed(2)}</span></th>`;
 	}, pointsPerGameRow.innerHTML);
 	thead.appendChild(pointsPerGameRow);
 
 	const body = document.querySelector('tbody');
 	const bodyHTML = teams.reduce((previousRow, team) => {
-		let html = previousRow + `<tr><th><span>${data.teams[team.country]}</span></th>`;
+		let html = previousRow + `<tr><th><span>${data.teams[team.country].displayName}</span></th>`;
 
 		players.forEach(player => {
 			if (player.teams.indexOf(team.country) > -1) {
-				html += `<td class="table-success"><span>${getPoints(team)}</span></td>`;
+				html += `<td class="table-success"><span>${team.points}</span></td>`;
 			} else {
 				html += `<td class="table-null"><span>0</span></td>`;
 			}
@@ -163,13 +285,25 @@ function generateHtml(teams, players) {
 	body.innerHTML = bodyHTML;
 }
 
-(async function() {
+async function main () {
 	let teams = await getTeams();
 
 	teams = teams.sort(sortTeams);
-	teams.forEach(generatePoints);
+	teams.forEach(generateTeamPointsCost);
 
+	try {
+		const bestTeam = getBestTeam(teams);
+
+		data.players.push(bestTeam);
+	} catch (e) {
+		console.log(`Failed to generate the best team.`);
+	}
+
+	teams.forEach(generatePlayerPoints);
 	data.players = data.players.sort(sortPlayers);
 
 	generateHtml(teams, data.players);
-})();
+
+}
+
+main();
