@@ -3,38 +3,38 @@ const LOCAL_STORAGE_TEAMS_KEY = 'getTeamsJson';
 
 const data = {
 	"teams": {
-		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14" },
-		"Australia": { displayName: "🇦🇺 Australia", cost: "3" },
-		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14" },
-		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18" },
-		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8" },
-		"Costa Rica": { displayName: "🇨🇷 Costa Rica", cost: "3" },
-		"Croatia": { displayName: "🇭🇷 Croatia", cost: "9" },
-		"Denmark": { displayName: "🇩🇰 Denmark", cost: "8" },
-		"Egypt": { displayName: "🇪🇬 Egypt", cost: "7" },
-		"England": { displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13" },
-		"France": { displayName: "🇫🇷 France", cost: "16" },
-		"Germany": { displayName: "🇩🇪 Germany", cost: "18" },
-		"Iceland": { displayName: "🇮🇸 Iceland", cost: "5" },
-		"Iran": { displayName: "🇮🇷 Iran", cost: "2" },
-		"Japan": { displayName: "🇯🇵 Japan", cost: "4" },
-		"Mexico": { displayName: "🇲🇽 Mexico", cost: "8" },
-		"Morocco": { displayName: "🇲🇦 Morocco", cost: "3" },
-		"Nigeria": { displayName: "🇳🇬 Nigeria", cost: "5" },
-		"Panama": { displayName: "🇵🇦 Panama", cost: "1" },
-		"Peru": { displayName: "🇵🇪 Peru", cost: "6" },
-		"Poland": { displayName: "🇵🇱 Poland", cost: "8" },
-		"Portugal": { displayName: "🇵🇹 Portugal", cost: "12" },
-		"Russia": { displayName: "🇷🇺 Russia", cost: "8" },
-		"Saudi Arabia": { displayName: "🇸🇦 Saudi Arabia", cost: "1" },
-		"Senegal": { displayName: "🇸🇳 Senegal", cost: "6" },
-		"Serbia": { displayName: "🇷🇸 Serbia", cost: "7" },
-		"Korea Republic": { displayName: "🇰🇷 South Korea", cost: "3" },
-		"Spain": { displayName: "🇪🇸 Spain", cost: "16" },
-		"Sweden": { displayName: "🇸🇪 Sweden", cost: "7" },
-		"Switzerland": { displayName: "🇨🇭 Switzerland", cost: "8" },
-		"Tunisia": { displayName: "🇹🇳 Tunisia", cost: "2" },
-		"Uruguay": { displayName: "🇺🇾 Uruguay", cost: "10" }
+		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14", stillIn: true },
+		"Australia": { displayName: "🇦🇺 Australia", cost: "3", stillIn: false },
+		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14", stillIn: true },
+		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18", stillIn: true },
+		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8", stillIn: true },
+		"Costa Rica": { displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false },
+		"Croatia": { displayName: "🇭🇷 Croatia", cost: "9", stillIn: true },
+		"Denmark": { displayName: "🇩🇰 Denmark", cost: "8", stillIn: true },
+		"Egypt": { displayName: "🇪🇬 Egypt", cost: "7", stillIn: false },
+		"England": { displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13", stillIn: true },
+		"France": { displayName: "🇫🇷 France", cost: "16", stillIn: true },
+		"Germany": { displayName: "🇩🇪 Germany", cost: "18", stillIn: false },
+		"Iceland": { displayName: "🇮🇸 Iceland", cost: "5", stillIn: false },
+		"Iran": { displayName: "🇮🇷 Iran", cost: "2", stillIn: false },
+		"Japan": { displayName: "🇯🇵 Japan", cost: "4", stillIn: true },
+		"Mexico": { displayName: "🇲🇽 Mexico", cost: "8", stillIn: true },
+		"Morocco": { displayName: "🇲🇦 Morocco", cost: "3", stillIn: false },
+		"Nigeria": { displayName: "🇳🇬 Nigeria", cost: "5", stillIn: false },
+		"Panama": { displayName: "🇵🇦 Panama", cost: "1", stillIn: true },
+		"Peru": { displayName: "🇵🇪 Peru", cost: "6", stillIn: false },
+		"Poland": { displayName: "🇵🇱 Poland", cost: "8", stillIn: true },
+		"Portugal": { displayName: "🇵🇹 Portugal", cost: "12", stillIn: true },
+		"Russia": { displayName: "🇷🇺 Russia", cost: "8", stillIn: true },
+		"Saudi Arabia": { displayName: "🇸🇦 Saudi Arabia", cost: "1", stillIn: false },
+		"Senegal": { displayName: "🇸🇳 Senegal", cost: "6", stillIn: true },
+		"Serbia": { displayName: "🇷🇸 Serbia", cost: "7", stillIn: false },
+		"Korea Republic": { displayName: "🇰🇷 South Korea", cost: "3", stillIn: false },
+		"Spain": { displayName: "🇪🇸 Spain", cost: "16", stillIn: true },
+		"Sweden": { displayName: "🇸🇪 Sweden", cost: "7", stillIn: true },
+		"Switzerland": { displayName: "🇨🇭 Switzerland", cost: "8", stillIn: true },
+		"Tunisia": { displayName: "🇹🇳 Tunisia", cost: "2", stillIn: true },
+		"Uruguay": { displayName: "🇺🇾 Uruguay", cost: "10", stillIn: true },
 	},
 	"players": [
 		{ "name": "Chris P.", "teams": [ "Brazil", "Colombia", "Denmark", "France", "Iran", "Panama", "Poland", "Portugal", "Russia", "Saudi Arabia", "Spain", "Tunisia" ], "points": 0 },
@@ -221,9 +221,17 @@ function generatePlayerPoints(team) {
 			player.gamesPlayed = 0;
 		}
 
+		if (!player.teamsRemaining) {
+			player.teamsRemaining = 0;
+		}
+
 		if (player.teams.indexOf(team.country) > -1) {
 			player.points += team.points;
 			player.gamesPlayed += team.games_played;
+
+			if (data.teams[team.country].stillIn) {
+				player.teamsRemaining++;
+			}
 		}
 	});
 }
@@ -266,15 +274,22 @@ function generateHtml(teams, players) {
 	}, pointsPerGameRow.innerHTML);
 	thead.appendChild(pointsPerGameRow);
 
+	const teamsRemainingRow = document.createElement('tr');
+	teamsRemainingRow.innerHTML = `<th scope="col"><span>Teams remaining</span></th>`;
+	teamsRemainingRow.innerHTML = players.reduce((html, player) => {
+		return `${html}<th><small>${player.teamsRemaining}</small></th>`;
+	}, teamsRemainingRow.innerHTML);
+	thead.appendChild(teamsRemainingRow);
+
 	const body = document.querySelector('tbody');
 	const bodyHTML = teams.reduce((previousRow, team) => {
-		let html = previousRow + `<tr><th><span>${data.teams[team.country].displayName}</span></th>`;
+		let html = previousRow + `<tr><th><span class="${data.teams[team.country].stillIn ? "" : "strikethru"}">${data.teams[team.country].displayName}</span></th>`;
 
 		players.forEach(player => {
 			if (player.teams.indexOf(team.country) > -1) {
-				html += `<td class="table-success"><span>${team.points}</span></td>`;
+				html += `<td class="${data.teams[team.country].stillIn ? "table-success" : "table-warning"}"><span>${team.points}</span></td>`;
 			} else {
-				html += `<td class="table-null"><span>0</span></td>`;
+				html += `<td class="table-null"></td>`;
 			}
 		});
 

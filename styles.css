@@ -74,3 +74,7 @@ td {
 	margin-left: 200px;
 	z-index: 0;
 }
+
+.strikethru {
+	text-decoration: line-through;
+}
