@@ -1,3 +1,4 @@
+//@ts-check
 const API_URL = 'https://world-cup-json.herokuapp.com/teams/results';
 const LOCAL_STORAGE_TEAMS_KEY = 'getTeamsJson';
 
@@ -105,7 +106,7 @@ async function getTeams() {
 	}
 
 	const response = await fetch(API_URL);
-	responseJson = await response.json();
+	const responseJson = await response.json();
 
 	setItem(responseJson);
 
@@ -118,10 +119,28 @@ function sortTeams(a, b) {
 
 function sortPlayers(a, b) {
 	// Knockout stage - by total points
+	return b.points - a.points;
+
+	// Group stage - by points per game
+	// return (b.points / b.gamesPlayed) - (a.points / a.gamesPlayed);
+}
+
+function sortPlayersByProjectedPoints(a, b) {
+	// Knockout stage - by total points
 	// return b.points - a.points;
 
 	// Group stage - by points per game
-	return (b.points / b.gamesPlayed) - (a.points / a.gamesPlayed);
+	return b.projectedPoints - a.projectedPoints;
+}
+
+/**
+ * @param {Array} players
+ */
+function addProjectedPointsPlacement(players) {
+	players = players.sort(sortPlayersByProjectedPoints);
+	players.filter(p => p.name != "Best team").forEach((player, index) => {
+		player.projectedPointsPlacement = index + 1;
+	});
 }
 
 function generateTeamPointsCost(team) {
@@ -263,14 +282,14 @@ function generateHtml(teams, players) {
 	const totalRow = document.createElement('tr');
 	totalRow.innerHTML = `<th scope="col"><span>Total points</span></th>`;
 	totalRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><small>${player.points}</small></th>`;
+		return `${html}<th><span>${player.points}</span></th>`;
 	}, totalRow.innerHTML);
 	thead.appendChild(totalRow);
 
 	const projectedRow = document.createElement('tr');
 	projectedRow.innerHTML = `<th scope="col"><span>Projected points</span></th>`;
 	projectedRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><small>${player.projectedPoints}</small></th>`;
+		return `${html}<th><small>${player.projectedPoints} ${player.projectedPointsPlacement ? "(" + player.projectedPointsPlacement + ")" : ""}</small></th>`;
 	}, projectedRow.innerHTML);
 	thead.appendChild(projectedRow);
 
@@ -284,7 +303,7 @@ function generateHtml(teams, players) {
 	const pointsPerGameRow = document.createElement('tr');
 	pointsPerGameRow.innerHTML = `<th scope="col"><span>Points per game</span></th>`;
 	pointsPerGameRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><span>${(player.points / player.gamesPlayed).toFixed(2)}</span></th>`;
+		return `${html}<th><small>${(player.points / player.gamesPlayed).toFixed(2)}</small></th>`;
 	}, pointsPerGameRow.innerHTML);
 	thead.appendChild(pointsPerGameRow);
 
@@ -329,6 +348,8 @@ async function main () {
 	}
 
 	teams.forEach(generatePlayerPoints);
+
+	addProjectedPointsPlacement(data.players);
 	data.players = data.players.sort(sortPlayers);
 
 	generateHtml(teams, data.players);
