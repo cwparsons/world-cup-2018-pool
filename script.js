@@ -4,7 +4,7 @@ const LOCAL_STORAGE_TEAMS_KEY = 'getTeamsJson';
 
 const data = {
 	"teams": {
-		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14", stillIn: true, projectedPoints: 0 },
+		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14", stillIn: false, projectedPoints: 0 },
 		"Australia": { displayName: "🇦🇺 Australia", cost: "3", stillIn: false, projectedPoints: 0 },
 		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, projectedPoints: 5 },
 		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18", stillIn: true, projectedPoints: 20 },
