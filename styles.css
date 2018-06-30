@@ -4,8 +4,27 @@ body {
 	padding: 2rem;
 }
 
+@media (max-width: 48rem) {
+	body {
+		font-size: 0.75rem;
+		line-height: 16px;
+		padding: 0.5rem;
+	}
+}
+
 h1 {
 	margin-bottom: 2rem;
+}
+
+@media (max-width: 48rem) {
+	h1 {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		margin-bottom: 0.5rem;
+	}
 }
 
 table {
@@ -25,10 +44,23 @@ thead th {
 	text-align: center;
 }
 
+@media (max-width: 48rem) {
+	thead th {
+		line-height: 16px;
+		width: 6rem;
+	}
+}
+
 thead th span {
 	display: inline-block;
 	line-height: 18px;
 	min-width: 5rem;
+}
+
+@media (max-width: 48rem) {
+	thead th span {
+		min-width: 3rem;
+	}
 }
 
 thead th:first-child {
@@ -40,6 +72,12 @@ td {
 	line-height: 24px;
 	text-align: center;
 	vertical-align: middle;
+}
+
+@media (max-width: 48rem) {
+	td {
+		line-height: 16px;
+	}
 }
 
 .table-success {
@@ -61,11 +99,25 @@ td {
 	min-width: 120px;
 }
 
+@media (max-width: 48rem) {
+	.scrolling tbody td,
+	.scrolling tbody th {
+		min-width: 0;
+	}
+}
+
 .scrolling thead th:first-child,
 .scrolling tbody th {
 	position: absolute;
 	left: 0;
 	width: 200px;
+}
+
+@media (max-width: 48rem) {
+	.scrolling thead th:first-child,
+	.scrolling tbody th {
+		width: 140px;
+	}
 }
 
 .scrolling-inner {
@@ -75,6 +127,11 @@ td {
 	z-index: 0;
 }
 
+@media (max-width: 48rem) {
+	.scrolling-inner {
+		margin-left: 140px;
+	}
+}
 .strikethru {
 	text-decoration: line-through;
 }
