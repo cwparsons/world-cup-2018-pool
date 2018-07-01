@@ -92,6 +92,12 @@ td {
 	position: relative;
 }
 
+@media (max-width: 48rem) {
+	.scrolling {
+		margin: 0 -0.5rem;
+	}
+}
+
 .scrolling tbody td,
 .scrolling tbody th {
 	vertical-align: middle;
