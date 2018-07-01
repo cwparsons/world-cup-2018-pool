@@ -26,7 +26,7 @@ const data = {
 		"Peru": { displayName: "🇵🇪 Peru", cost: "6", stillIn: false, projectedPoints: 0 },
 		"Poland": { displayName: "🇵🇱 Poland", cost: "8", stillIn: false, projectedPoints: 0 },
 		"Portugal": { displayName: "🇵🇹 Portugal", cost: "12", stillIn: false, projectedPoints: 0 },
-		"Russia": { displayName: "🇷🇺 Russia", cost: "8", stillIn: false, projectedPoints: 0 },
+		"Russia": { displayName: "🇷🇺 Russia", cost: "8", stillIn: true, projectedPoints: 0 },
 		"Saudi Arabia": { displayName: "🇸🇦 Saudi Arabia", cost: "1", stillIn: false, projectedPoints: 0 },
 		"Senegal": { displayName: "🇸🇳 Senegal", cost: "6", stillIn: false, projectedPoints: 0 },
 		"Serbia": { displayName: "🇷🇸 Serbia", cost: "7", stillIn: false, projectedPoints: 0 },
