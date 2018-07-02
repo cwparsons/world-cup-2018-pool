@@ -6,7 +6,7 @@ const data = {
 	"teams": {
 		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14", stillIn: false, projectedPoints: 0 },
 		"Australia": { displayName: "🇦🇺 Australia", cost: "3", stillIn: false, projectedPoints: 0 },
-		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, projectedPoints: 5 },
+		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, projectedPoints: 0 },
 		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18", stillIn: true, projectedPoints: 15 },
 		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8", stillIn: true, projectedPoints: 0 },
 		"Costa Rica": { displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false, projectedPoints: 0 },
@@ -18,7 +18,7 @@ const data = {
 		"Germany": { displayName: "🇩🇪 Germany", cost: "18", stillIn: false, projectedPoints: 0 },
 		"Iceland": { displayName: "🇮🇸 Iceland", cost: "5", stillIn: false, projectedPoints: 0 },
 		"Iran": { displayName: "🇮🇷 Iran", cost: "2", stillIn: false, projectedPoints: 0 },
-		"Japan": { displayName: "🇯🇵 Japan", cost: "4", stillIn: true, projectedPoints: 0 },
+		"Japan": { displayName: "🇯🇵 Japan", cost: "4", stillIn: false, projectedPoints: 0 },
 		"Mexico": { displayName: "🇲🇽 Mexico", cost: "8", stillIn: false, projectedPoints: 0 },
 		"Morocco": { displayName: "🇲🇦 Morocco", cost: "3", stillIn: false, projectedPoints: 0 },
 		"Nigeria": { displayName: "🇳🇬 Nigeria", cost: "5", stillIn: false, projectedPoints: 0 },
