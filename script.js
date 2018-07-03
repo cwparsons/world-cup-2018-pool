@@ -33,7 +33,7 @@ const data = {
 		"Korea Republic": { displayName: "🇰🇷 South Korea", cost: "3", stillIn: false, projectedPoints: 0 },
 		"Spain": { displayName: "🇪🇸 Spain", cost: "16", stillIn: false, projectedPoints: 0 },
 		"Sweden": { displayName: "🇸🇪 Sweden", cost: "7", stillIn: true, projectedPoints: 0 },
-		"Switzerland": { displayName: "🇨🇭 Switzerland", cost: "8", stillIn: true, projectedPoints: 5 },
+		"Switzerland": { displayName: "🇨🇭 Switzerland", cost: "8", stillIn: false, projectedPoints: 0 },
 		"Tunisia": { displayName: "🇹🇳 Tunisia", cost: "2", stillIn: false, projectedPoints: 0 },
 		"Uruguay": { displayName: "🇺🇾 Uruguay", cost: "10", stillIn: true, projectedPoints: 0 },
 	},
