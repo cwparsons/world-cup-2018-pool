@@ -8,7 +8,7 @@ const data = {
 		"Australia": { displayName: "🇦🇺 Australia", cost: "3", stillIn: false, projectedPoints: 0 },
 		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, projectedPoints: 0 },
 		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18", stillIn: true, projectedPoints: 15 },
-		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8", stillIn: true, projectedPoints: 0 },
+		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8", stillIn: false, projectedPoints: 0 },
 		"Costa Rica": { displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false, projectedPoints: 0 },
 		"Croatia": { displayName: "🇭🇷 Croatia", cost: "9", stillIn: true, projectedPoints: 5 },
 		"Denmark": { displayName: "🇩🇰 Denmark", cost: "8", stillIn: false, projectedPoints: 0 },
