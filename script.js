@@ -13,7 +13,7 @@ const data = {
 		"Croatia": { displayName: "🇭🇷 Croatia", cost: "9", stillIn: true, projectedPoints: 5 },
 		"Denmark": { displayName: "🇩🇰 Denmark", cost: "8", stillIn: false, projectedPoints: 0 },
 		"Egypt": { displayName: "🇪🇬 Egypt", cost: "7", stillIn: false, projectedPoints: 0 },
-		"England": { displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13", stillIn: true, projectedPoints: 15 },
+		"England": { displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13", stillIn: true, projectedPoints: 10 },
 		"France": { displayName: "🇫🇷 France", cost: "16", stillIn: true, projectedPoints: 15 },
 		"Germany": { displayName: "🇩🇪 Germany", cost: "18", stillIn: false, projectedPoints: 0 },
 		"Iceland": { displayName: "🇮🇸 Iceland", cost: "5", stillIn: false, projectedPoints: 0 },
