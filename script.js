@@ -2,6 +2,7 @@
 
 const data = {
 	"teams": {
+<<<<<<< HEAD
 		"Argentina": { country: "Argentina", displayName: "🇦🇷 Argentina", cost: "14", stillIn: false, wins: 1, draws: 1, projectedPoints: 0 },
 		"Australia": { country: "Australia", displayName: "🇦🇺 Australia", cost: "3", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
 		"Belgium": { country: "Belgium", displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, wins: 4, draws: 0, projectedPoints: 0 },
@@ -34,6 +35,40 @@ const data = {
 		"Switzerland": { country: "Switzerland", displayName: "🇨🇭 Switzerland", cost: "8", stillIn: false, wins: 1, draws: 2, projectedPoints: 0 },
 		"Tunisia": { country: "Tunisia", displayName: "🇹🇳 Tunisia", cost: "2", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
 		"Uruguay": { country: "Uruguay", displayName: "🇺🇾 Uruguay", cost: "10", stillIn: true, wins: 4, draws: 0, projectedPoints: 0 },
+=======
+		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14", stillIn: false, projectedPoints: 0 },
+		"Australia": { displayName: "🇦🇺 Australia", cost: "3", stillIn: false, projectedPoints: 0 },
+		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, projectedPoints: 0 },
+		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18", stillIn: true, projectedPoints: 15 },
+		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8", stillIn: false, projectedPoints: 0 },
+		"Costa Rica": { displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false, projectedPoints: 0 },
+		"Croatia": { displayName: "🇭🇷 Croatia", cost: "9", stillIn: true, projectedPoints: 5 },
+		"Denmark": { displayName: "🇩🇰 Denmark", cost: "8", stillIn: false, projectedPoints: 0 },
+		"Egypt": { displayName: "🇪🇬 Egypt", cost: "7", stillIn: false, projectedPoints: 0 },
+		"England": { displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13", stillIn: true, projectedPoints: 10 },
+		"France": { displayName: "🇫🇷 France", cost: "16", stillIn: true, projectedPoints: 15 },
+		"Germany": { displayName: "🇩🇪 Germany", cost: "18", stillIn: false, projectedPoints: 0 },
+		"Iceland": { displayName: "🇮🇸 Iceland", cost: "5", stillIn: false, projectedPoints: 0 },
+		"Iran": { displayName: "🇮🇷 Iran", cost: "2", stillIn: false, projectedPoints: 0 },
+		"Japan": { displayName: "🇯🇵 Japan", cost: "4", stillIn: false, projectedPoints: 0 },
+		"Mexico": { displayName: "🇲🇽 Mexico", cost: "8", stillIn: false, projectedPoints: 0 },
+		"Morocco": { displayName: "🇲🇦 Morocco", cost: "3", stillIn: false, projectedPoints: 0 },
+		"Nigeria": { displayName: "🇳🇬 Nigeria", cost: "5", stillIn: false, projectedPoints: 0 },
+		"Panama": { displayName: "🇵🇦 Panama", cost: "1", stillIn: false, projectedPoints: 0 },
+		"Peru": { displayName: "🇵🇪 Peru", cost: "6", stillIn: false, projectedPoints: 0 },
+		"Poland": { displayName: "🇵🇱 Poland", cost: "8", stillIn: false, projectedPoints: 0 },
+		"Portugal": { displayName: "🇵🇹 Portugal", cost: "12", stillIn: false, projectedPoints: 0 },
+		"Russia": { displayName: "🇷🇺 Russia", cost: "8", stillIn: true, projectedPoints: 0 },
+		"Saudi Arabia": { displayName: "🇸🇦 Saudi Arabia", cost: "1", stillIn: false, projectedPoints: 0 },
+		"Senegal": { displayName: "🇸🇳 Senegal", cost: "6", stillIn: false, projectedPoints: 0 },
+		"Serbia": { displayName: "🇷🇸 Serbia", cost: "7", stillIn: false, projectedPoints: 0 },
+		"Korea Republic": { displayName: "🇰🇷 South Korea", cost: "3", stillIn: false, projectedPoints: 0 },
+		"Spain": { displayName: "🇪🇸 Spain", cost: "16", stillIn: false, projectedPoints: 0 },
+		"Sweden": { displayName: "🇸🇪 Sweden", cost: "7", stillIn: true, projectedPoints: 0 },
+		"Switzerland": { displayName: "🇨🇭 Switzerland", cost: "8", stillIn: false, projectedPoints: 0 },
+		"Tunisia": { displayName: "🇹🇳 Tunisia", cost: "2", stillIn: false, projectedPoints: 0 },
+		"Uruguay": { displayName: "🇺🇾 Uruguay", cost: "10", stillIn: true, projectedPoints: 0 },
+>>>>>>> bf93820c8c166bebcbdaeaf2e4a4e6cb546e3ded
 	},
 	"players": [
 		{ "name": "Chris P.", "teams": [ "Brazil", "Colombia", "Denmark", "France", "Iran", "Panama", "Poland", "Portugal", "Russia", "Saudi Arabia", "Spain", "Tunisia" ], "points": 0, "projectedPoints": 0 },
