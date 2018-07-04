@@ -1,41 +1,39 @@
 //@ts-check
-const API_URL = 'https://world-cup-json.herokuapp.com/teams/results';
-const LOCAL_STORAGE_TEAMS_KEY = 'getTeamsJson';
 
 const data = {
 	"teams": {
-		"Argentina": { displayName: "🇦🇷 Argentina", cost: "14", stillIn: false, projectedPoints: 0 },
-		"Australia": { displayName: "🇦🇺 Australia", cost: "3", stillIn: false, projectedPoints: 0 },
-		"Belgium": { displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, projectedPoints: 0 },
-		"Brazil": { displayName: "🇧🇷 Brazil", cost: "18", stillIn: true, projectedPoints: 15 },
-		"Colombia": { displayName: "🇨🇴 Colombia", cost: "8", stillIn: true, projectedPoints: 0 },
-		"Costa Rica": { displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false, projectedPoints: 0 },
-		"Croatia": { displayName: "🇭🇷 Croatia", cost: "9", stillIn: true, projectedPoints: 5 },
-		"Denmark": { displayName: "🇩🇰 Denmark", cost: "8", stillIn: false, projectedPoints: 0 },
-		"Egypt": { displayName: "🇪🇬 Egypt", cost: "7", stillIn: false, projectedPoints: 0 },
-		"England": { displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13", stillIn: true, projectedPoints: 15 },
-		"France": { displayName: "🇫🇷 France", cost: "16", stillIn: true, projectedPoints: 15 },
-		"Germany": { displayName: "🇩🇪 Germany", cost: "18", stillIn: false, projectedPoints: 0 },
-		"Iceland": { displayName: "🇮🇸 Iceland", cost: "5", stillIn: false, projectedPoints: 0 },
-		"Iran": { displayName: "🇮🇷 Iran", cost: "2", stillIn: false, projectedPoints: 0 },
-		"Japan": { displayName: "🇯🇵 Japan", cost: "4", stillIn: false, projectedPoints: 0 },
-		"Mexico": { displayName: "🇲🇽 Mexico", cost: "8", stillIn: false, projectedPoints: 0 },
-		"Morocco": { displayName: "🇲🇦 Morocco", cost: "3", stillIn: false, projectedPoints: 0 },
-		"Nigeria": { displayName: "🇳🇬 Nigeria", cost: "5", stillIn: false, projectedPoints: 0 },
-		"Panama": { displayName: "🇵🇦 Panama", cost: "1", stillIn: false, projectedPoints: 0 },
-		"Peru": { displayName: "🇵🇪 Peru", cost: "6", stillIn: false, projectedPoints: 0 },
-		"Poland": { displayName: "🇵🇱 Poland", cost: "8", stillIn: false, projectedPoints: 0 },
-		"Portugal": { displayName: "🇵🇹 Portugal", cost: "12", stillIn: false, projectedPoints: 0 },
-		"Russia": { displayName: "🇷🇺 Russia", cost: "8", stillIn: true, projectedPoints: 0 },
-		"Saudi Arabia": { displayName: "🇸🇦 Saudi Arabia", cost: "1", stillIn: false, projectedPoints: 0 },
-		"Senegal": { displayName: "🇸🇳 Senegal", cost: "6", stillIn: false, projectedPoints: 0 },
-		"Serbia": { displayName: "🇷🇸 Serbia", cost: "7", stillIn: false, projectedPoints: 0 },
-		"Korea Republic": { displayName: "🇰🇷 South Korea", cost: "3", stillIn: false, projectedPoints: 0 },
-		"Spain": { displayName: "🇪🇸 Spain", cost: "16", stillIn: false, projectedPoints: 0 },
-		"Sweden": { displayName: "🇸🇪 Sweden", cost: "7", stillIn: true, projectedPoints: 0 },
-		"Switzerland": { displayName: "🇨🇭 Switzerland", cost: "8", stillIn: false, projectedPoints: 0 },
-		"Tunisia": { displayName: "🇹🇳 Tunisia", cost: "2", stillIn: false, projectedPoints: 0 },
-		"Uruguay": { displayName: "🇺🇾 Uruguay", cost: "10", stillIn: true, projectedPoints: 0 },
+		"Argentina": { country: "Argentina", displayName: "🇦🇷 Argentina", cost: "14", stillIn: false, wins: 1, draws: 1, projectedPoints: 0 },
+		"Australia": { country: "Australia", displayName: "🇦🇺 Australia", cost: "3", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
+		"Belgium": { country: "Belgium", displayName: "🇧🇪 Belgium", cost: "14", stillIn: true, wins: 4, draws: 0, projectedPoints: 0 },
+		"Brazil": { country: "Brazil", displayName: "🇧🇷 Brazil", cost: "18", stillIn: true, wins: 3, draws: 1, projectedPoints: 15 },
+		"Colombia": { country: "Colombia", displayName: "🇨🇴 Colombia", cost: "8", stillIn: false, wins: 2, draws: 0, projectedPoints: 0 },
+		"Costa Rica": { country: "Costa Rica", displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
+		"Croatia": { country: "Croatia", displayName: "🇭🇷 Croatia", cost: "9", stillIn: true, wins: 4, draws: 0, projectedPoints: 5 },
+		"Denmark": { country: "Denmark", displayName: "🇩🇰 Denmark", cost: "8", stillIn: false, wins: 1, draws: 2, projectedPoints: 0 },
+		"Egypt": { country: "Egypt", displayName: "🇪🇬 Egypt", cost: "7", stillIn: false, wins: 0, draws: 0, projectedPoints: 0 },
+		"England": { country: "England", displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13", stillIn: true, wins: 3, draws: 0, projectedPoints: 15 },
+		"France": { country: "France", displayName: "🇫🇷 France", cost: "16", stillIn: true, wins: 3, draws: 1, projectedPoints: 15 },
+		"Germany": { country: "Germany", displayName: "🇩🇪 Germany", cost: "18", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Iceland": { country: "Iceland", displayName: "🇮🇸 Iceland", cost: "5", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
+		"Iran": { country: "Iran", displayName: "🇮🇷 Iran", cost: "2", stillIn: false, wins: 1, draws: 1, projectedPoints: 0 },
+		"Japan": { country: "Japan", displayName: "🇯🇵 Japan", cost: "4", stillIn: false, wins: 1, draws: 1, projectedPoints: 0 },
+		"Mexico": { country: "Mexico", displayName: "🇲🇽 Mexico", cost: "8", stillIn: false, wins: 2, draws: 0, projectedPoints: 0 },
+		"Morocco": { country: "Morocco", displayName: "🇲🇦 Morocco", cost: "3", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
+		"Nigeria": { country: "Nigeria", displayName: "🇳🇬 Nigeria", cost: "5", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Panama": { country: "Panama", displayName: "🇵🇦 Panama", cost: "1", stillIn: false, wins: 0, draws: 0, projectedPoints: 0 },
+		"Peru": { country: "Peru", displayName: "🇵🇪 Peru", cost: "6", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Poland": { country: "Poland", displayName: "🇵🇱 Poland", cost: "8", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Portugal": { country: "Portugal", displayName: "🇵🇹 Portugal", cost: "12", stillIn: false, wins: 1, draws: 2, projectedPoints: 0 },
+		"Russia": { country: "Russia", displayName: "🇷🇺 Russia", cost: "8", stillIn: true, wins: 3, draws: 0, projectedPoints: 0 },
+		"Saudi Arabia": { country: "Saudi Arabia", displayName: "🇸🇦 Saudi Arabia", cost: "1", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Senegal": { country: "Senegal", displayName: "🇸🇳 Senegal", cost: "6", stillIn: false, wins: 1, draws: 1, projectedPoints: 0 },
+		"Serbia": { country: "Serbia", displayName: "🇷🇸 Serbia", cost: "7", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Korea Republic": { country: "Korea Republic", displayName: "🇰🇷 South Korea", cost: "3", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Spain": { country: "Spain", displayName: "🇪🇸 Spain", cost: "16", stillIn: false, wins: 1, draws: 2, projectedPoints: 0 },
+		"Sweden": { country: "Sweden", displayName: "🇸🇪 Sweden", cost: "7", stillIn: true, wins: 3, draws: 0, projectedPoints: 0 },
+		"Switzerland": { country: "Switzerland", displayName: "🇨🇭 Switzerland", cost: "8", stillIn: false, wins: 1, draws: 2, projectedPoints: 0 },
+		"Tunisia": { country: "Tunisia", displayName: "🇹🇳 Tunisia", cost: "2", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
+		"Uruguay": { country: "Uruguay", displayName: "🇺🇾 Uruguay", cost: "10", stillIn: true, wins: 4, draws: 0, projectedPoints: 0 },
 	},
 	"players": [
 		{ "name": "Chris P.", "teams": [ "Brazil", "Colombia", "Denmark", "France", "Iran", "Panama", "Poland", "Portugal", "Russia", "Saudi Arabia", "Spain", "Tunisia" ], "points": 0, "projectedPoints": 0 },
@@ -73,44 +71,14 @@ const data = {
 	]
 };
 
-function getItem() {
-	const now = new Date().getTime();
-
-	const storedItemStringified = localStorage.getItem(LOCAL_STORAGE_TEAMS_KEY);
-	const storedItem = JSON.parse(storedItemStringified);
-
-	if (storedItem && storedItem.expiryDate > now && storedItem.response) {
-		return storedItem.response;
-	}
-
-	return null;
-}
-
-function setItem(responseJson) {
-	const now = new Date().getTime();
-	const delay = 1000 * 10; // 10 seconds
-
-	const storedItem = {
-		response: responseJson,
-		expiryDate: now + delay
-	};
-
-	localStorage.setItem(LOCAL_STORAGE_TEAMS_KEY, JSON.stringify(storedItem));
-}
-
 async function getTeams() {
-	const storedItem = getItem();
+	const teams = [];
 
-	if (storedItem) {
-		return storedItem;
+	for (let i in data.teams) {
+		teams.push(data.teams[i]);
 	}
 
-	const response = await fetch(API_URL);
-	const responseJson = await response.json();
-
-	setItem(responseJson);
-
-	return responseJson;
+	return teams;
 }
 
 function sortTeams(a, b) {
@@ -120,16 +88,9 @@ function sortTeams(a, b) {
 function sortPlayers(a, b) {
 	// Knockout stage - by total points
 	return b.points - a.points;
-
-	// Group stage - by points per game
-	// return (b.points / b.gamesPlayed) - (a.points / a.gamesPlayed);
 }
 
 function sortPlayersByProjectedPoints(a, b) {
-	// Knockout stage - by total points
-	// return b.points - a.points;
-
-	// Group stage - by points per game
 	return b.projectedPoints - a.projectedPoints;
 }
 
@@ -145,10 +106,8 @@ function addProjectedPointsPlacement(players) {
 
 function generateTeamPointsCost(team) {
 	team.points = team.wins * 5 + team.draws * 2;
-	team.projectedPoints = data.teams[team.country].projectedPoints + team.points;
-	team.cost = data.teams[team.country].cost;
+	team.projectedPoints = team.projectedPoints + team.points;
 }
-
 
 function getBestTeam(teams) {
 	const solution = knapsack(teams, 100).subset;
@@ -255,7 +214,7 @@ function generatePlayerPoints(team) {
 			player.projectedPoints += team.projectedPoints;
 			player.gamesPlayed += team.games_played;
 
-			if (data.teams[team.country].stillIn) {
+			if (team.stillIn) {
 				player.teamsRemaining++;
 			}
 		}
@@ -293,20 +252,6 @@ function generateHtml(teams, players) {
 	}, projectedRow.innerHTML);
 	thead.appendChild(projectedRow);
 
-	const gamesPlayedRow = document.createElement('tr');
-	gamesPlayedRow.innerHTML = `<th scope="col"><span>Games played</span></th>`;
-	gamesPlayedRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><small>${player.gamesPlayed}</small></th>`;
-	}, gamesPlayedRow.innerHTML);
-	thead.appendChild(gamesPlayedRow);
-
-	const pointsPerGameRow = document.createElement('tr');
-	pointsPerGameRow.innerHTML = `<th scope="col"><span>Points per game</span></th>`;
-	pointsPerGameRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><small>${(player.points / player.gamesPlayed).toFixed(2)}</small></th>`;
-	}, pointsPerGameRow.innerHTML);
-	thead.appendChild(pointsPerGameRow);
-
 	const teamsRemainingRow = document.createElement('tr');
 	teamsRemainingRow.innerHTML = `<th scope="col"><span>Teams remaining</span></th>`;
 	teamsRemainingRow.innerHTML = players.reduce((html, player) => {
@@ -316,11 +261,11 @@ function generateHtml(teams, players) {
 
 	const body = document.querySelector('tbody');
 	const bodyHTML = teams.reduce((previousRow, team) => {
-		let html = previousRow + `<tr><th><span class="${data.teams[team.country].stillIn ? "" : "strikethru"}">${data.teams[team.country].displayName} <small><abbr title="Projected points">(${team.projectedPoints})</abbr></small></span></th>`;
+		let html = previousRow + `<tr><th><span class="${team.stillIn ? "" : "strikethru"}">${team.displayName} <small><abbr title="Projected points">(${team.projectedPoints})</abbr></small></span></th>`;
 
 		players.forEach(player => {
 			if (player.teams.indexOf(team.country) > -1) {
-				html += `<td class="${data.teams[team.country].stillIn ? "table-success" : "table-warning"}"><span>${team.points}</span></td>`;
+				html += `<td class="${team.stillIn ? "table-success" : "table-warning"}"><span>${team.points}</span></td>`;
 			} else {
 				html += `<td class="table-null"></td>`;
 			}
@@ -336,8 +281,8 @@ function generateHtml(teams, players) {
 async function main () {
 	let teams = await getTeams();
 
-	teams = teams.sort(sortTeams);
 	teams.forEach(generateTeamPointsCost);
+	teams = teams.sort(sortTeams);
 
 	try {
 		const bestTeam = getBestTeam(teams);
