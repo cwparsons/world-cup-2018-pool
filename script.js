@@ -33,7 +33,7 @@ const data = {
 		"Sweden": { country: "Sweden", displayName: "🇸🇪 Sweden", cost: "7", stillIn: true, wins: 3, draws: 0, projectedPoints: 0 },
 		"Switzerland": { country: "Switzerland", displayName: "🇨🇭 Switzerland", cost: "8", stillIn: false, wins: 1, draws: 2, projectedPoints: 0 },
 		"Tunisia": { country: "Tunisia", displayName: "🇹🇳 Tunisia", cost: "2", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
-		"Uruguay": { country: "Uruguay", displayName: "🇺🇾 Uruguay", cost: "10", stillIn: true, wins: 4, draws: 0, projectedPoints: 0 },
+		"Uruguay": { country: "Uruguay", displayName: "🇺🇾 Uruguay", cost: "10", stillIn: false, wins: 4, draws: 0, projectedPoints: 0 },
 	},
 	"players": [
 		{ "name": "Chris P.", "teams": [ "Brazil", "Colombia", "Denmark", "France", "Iran", "Panama", "Poland", "Portugal", "Russia", "Saudi Arabia", "Spain", "Tunisia" ], "points": 0, "projectedPoints": 0 },
