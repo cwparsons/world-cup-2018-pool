@@ -4,7 +4,7 @@ const data = {
 	"teams": {
 		"Argentina": { country: "Argentina", displayName: "🇦🇷 Argentina", cost: "14", stillIn: false, wins: 1, draws: 1, projectedPoints: 0 },
 		"Australia": { country: "Australia", displayName: "🇦🇺 Australia", cost: "3", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
-		"Belgium": { country: "Belgium", displayName: "🇧🇪 Belgium", cost: "14", stillIn: false, wins: 5, draws: 0, projectedPoints: 5 },
+		"Belgium": { country: "Belgium", displayName: "🇧🇪 Belgium", cost: "14", stillIn: false, wins: 6, draws: 0, projectedPoints: 0 },
 		"Brazil": { country: "Brazil", displayName: "🇧🇷 Brazil", cost: "18", stillIn: false, wins: 3, draws: 1, projectedPoints: 0 },
 		"Colombia": { country: "Colombia", displayName: "🇨🇴 Colombia", cost: "8", stillIn: false, wins: 2, draws: 0, projectedPoints: 0 },
 		"Costa Rica": { country: "Costa Rica", displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
