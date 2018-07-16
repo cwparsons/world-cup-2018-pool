@@ -8,11 +8,11 @@ const data = {
 		"Brazil": { country: "Brazil", displayName: "🇧🇷 Brazil", cost: "18", stillIn: false, wins: 3, draws: 1, projectedPoints: 0 },
 		"Colombia": { country: "Colombia", displayName: "🇨🇴 Colombia", cost: "8", stillIn: false, wins: 2, draws: 0, projectedPoints: 0 },
 		"Costa Rica": { country: "Costa Rica", displayName: "🇨🇷 Costa Rica", cost: "3", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
-		"Croatia": { country: "Croatia", displayName: "🇭🇷 Croatia", cost: "9", stillIn: true, wins: 6, draws: 0, projectedPoints: 0 },
+		"Croatia": { country: "Croatia", displayName: "🇭🇷 Croatia", cost: "9", stillIn: false, wins: 6, draws: 0, projectedPoints: 0 },
 		"Denmark": { country: "Denmark", displayName: "🇩🇰 Denmark", cost: "8", stillIn: false, wins: 1, draws: 2, projectedPoints: 0 },
 		"Egypt": { country: "Egypt", displayName: "🇪🇬 Egypt", cost: "7", stillIn: false, wins: 0, draws: 0, projectedPoints: 0 },
 		"England": { country: "England", displayName: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", cost: "13", stillIn: false, wins: 4, draws: 0, projectedPoints: 0 },
-		"France": { country: "France", displayName: "🇫🇷 France", cost: "16", stillIn: true, wins: 5, draws: 1, projectedPoints: 5 },
+		"France": { country: "France", displayName: "🇫🇷 France", cost: "16", stillIn: true, wins: 6, draws: 1, projectedPoints: 0 },
 		"Germany": { country: "Germany", displayName: "🇩🇪 Germany", cost: "18", stillIn: false, wins: 1, draws: 0, projectedPoints: 0 },
 		"Iceland": { country: "Iceland", displayName: "🇮🇸 Iceland", cost: "5", stillIn: false, wins: 0, draws: 1, projectedPoints: 0 },
 		"Iran": { country: "Iran", displayName: "🇮🇷 Iran", cost: "2", stillIn: false, wins: 1, draws: 1, projectedPoints: 0 },
@@ -245,23 +245,9 @@ function generateHtml(teams, players) {
 	}, totalRow.innerHTML);
 	thead.appendChild(totalRow);
 
-	const projectedRow = document.createElement('tr');
-	projectedRow.innerHTML = `<th scope="col"><span>Projected points</span></th>`;
-	projectedRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><small>${player.projectedPoints} ${player.projectedPointsPlacement ? "(" + player.projectedPointsPlacement + ")" : ""}</small></th>`;
-	}, projectedRow.innerHTML);
-	thead.appendChild(projectedRow);
-
-	const teamsRemainingRow = document.createElement('tr');
-	teamsRemainingRow.innerHTML = `<th scope="col"><span>Teams remaining</span></th>`;
-	teamsRemainingRow.innerHTML = players.reduce((html, player) => {
-		return `${html}<th><small>${player.teamsRemaining}</small></th>`;
-	}, teamsRemainingRow.innerHTML);
-	thead.appendChild(teamsRemainingRow);
-
 	const body = document.querySelector('tbody');
 	const bodyHTML = teams.reduce((previousRow, team) => {
-		let html = previousRow + `<tr><th><span class="${team.stillIn ? "" : "strikethru"}">${team.displayName} <small><abbr title="Projected points">(${team.projectedPoints})</abbr></small></span></th>`;
+		let html = previousRow + `<tr><th><span class="${team.stillIn ? "" : "strikethru"}">${team.displayName}</span></th>`;
 
 		players.forEach(player => {
 			if (player.teams.indexOf(team.country) > -1) {
